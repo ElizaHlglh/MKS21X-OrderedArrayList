@@ -16,13 +16,14 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public void add(int index, T value){
-    super.add(index,value);
+    index = Loc(value);
+    super.add(index+1,value);
   }
 
-  public int MaxLoc(T value){
+  public int Loc(T value){
     int loc = 0;
     for (int i = 0; i < super.size(); i++){
-      if (super.get(i).compareTo(super.get(loc)) >= 0){
+      if (super.get(loc).compareTo(super.get(i)) >= 0){
         loc = i;
       }
     }
