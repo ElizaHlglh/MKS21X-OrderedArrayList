@@ -20,7 +20,12 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     }
   }
 
-  public void add(int index, String word){
-
+  public void add(int index, T value){
+    if (value.equals(null) || index < super.size()) {
+      throw new IllegalArgumentException("Error occur, check index or the input");
+    }
+    else{
+      super.add(index,value);
+    }
   }
 }
