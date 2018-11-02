@@ -23,7 +23,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   public int Loc(T value){
     int loc = 0;
     for (int i = 0; i < super.size(); i++){
-      if (super.get(loc).compareTo(super.get(i)) >= 0){
+      if (value.compareTo(super.get(i)) >= 0){
         loc = i;
       }
     }
