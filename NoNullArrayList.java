@@ -6,13 +6,13 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(int startingCapacity){
     super(startingCapacity);
   }
-  public String set(int index, String value) {
+  public String set(int index, T value) {
 
   }
 
-  public boolean add(String value){
+  public boolean add(T value){
     if (value.equals(null)) {
-      throw new IllegalArgumentException(false);
+      throw new IllegalArgumentException("Can't add null");
     }
     else{
       super.add(value);
