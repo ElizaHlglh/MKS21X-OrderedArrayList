@@ -1,4 +1,4 @@
-import java.ulti.ArrayList;
+import java.util.ArrayList;
 public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(){
 
@@ -6,7 +6,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(int startingCapacity){
     super(startingCapacity);
   }
-  public String set(int index, T value) {
+  public T set(int index, T value) {
 
   }
 
