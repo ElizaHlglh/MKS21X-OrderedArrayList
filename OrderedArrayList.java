@@ -8,11 +8,20 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public T set(int index, T value) {
-    return super.set(index,value);
+    if (index == Loc(value)){
+      return super.set(Loc(value),value);
+    }
+    else{
+      T removed = super.get(index);
+      super.remove(index);
+      super.add(Loc(value)+1,value);
+      return removed;
+    }
   }
 
   public boolean add(T value){
-    return super.add(value);
+    super.add(Loc(value),value);
+    return true;
   }
 
   public void add(int index, T value){
